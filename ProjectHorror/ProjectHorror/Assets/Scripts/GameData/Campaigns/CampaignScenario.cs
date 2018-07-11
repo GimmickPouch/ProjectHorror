@@ -10,4 +10,7 @@ public class CampaignScenario : ScriptableObject
     public Deck EncounterDeck = null;
 
     public ChaosBag ChaosBag = null;
+
+    public List<CDLocation> Locations = new List<CDLocation>(); // Need some way of setting locations to appear in groups like The Gathering
+    public int StartingLocation = 0;
 }
