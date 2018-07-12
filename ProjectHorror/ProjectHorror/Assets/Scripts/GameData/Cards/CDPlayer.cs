@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 public class CDPlayer : BaseCardData
 {
+    public int StartingHealth = 5;
+    public int StartingHorror = 5;
+    public int StartingResources = 5;
+
     public List<SkillAttributeQuantity> SkillAttributes = new List<SkillAttributeQuantity>
     {
         new SkillAttributeQuantity() { SkillAttribute = SkillAttribute.Willpower, SkillPoints = 1 },

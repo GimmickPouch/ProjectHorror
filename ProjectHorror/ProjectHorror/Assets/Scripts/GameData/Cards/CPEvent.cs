@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-public class CPSkill : BasePlayable
+public class CPEvent : BasePlayable
 {
 
 }
