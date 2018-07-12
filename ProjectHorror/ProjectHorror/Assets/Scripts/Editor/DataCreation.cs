@@ -51,7 +51,8 @@ public class DataCreation
     {
         var asset = ScriptableObject.CreateInstance<Deck>();
 
-        AssetDatabase.CreateAsset(asset, "Assets/Data/Decks/NewDeck.asset");
+        string campaignName = PlayerPrefs.GetString("CampaignInDevelopment", "Tests");
+        AssetDatabase.CreateAsset(asset, "Assets/Data/Campaigns/" + campaignName + "/Decks/NewDeck.asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();
@@ -88,5 +89,13 @@ public class DataCreation
         {
             folderName += "/";
         }
+    }
+
+    [MenuItem("Data/Set Campaign To Develop")]
+    public static void SetCampaignName()
+    {
+        string campaignName = "Tests";
+        PlayerPrefs.SetString("CampaignInDevelopment", campaignName); // TODO make this string editable
+        Debug.Log("Campaign in development set to " + campaignName);
     }
 }

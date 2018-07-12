@@ -10,6 +10,8 @@ public class CDPlayer : BaseCardData
         new SkillAttributeQuantity() { SkillAttribute = SkillAttribute.Strength, SkillPoints = 1 },
         new SkillAttributeQuantity() { SkillAttribute = SkillAttribute.Evasiveness, SkillPoints = 1 }
     };
+
+    public Deck PlayerDeck = null;
 }
 
 [Serializable]

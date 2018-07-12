@@ -6,6 +6,9 @@ public class Campaign : ScriptableObject
 {
     public string CampaignName = string.Empty;
     public Difficulty Difficulty = Difficulty.Undefined;
+
+    public int MaxPlayerCount = 4;
+
     public List<CampaignScenario> CampaignSteps = new List<CampaignScenario>();
 }
 
