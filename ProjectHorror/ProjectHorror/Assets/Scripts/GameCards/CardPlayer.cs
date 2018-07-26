@@ -26,6 +26,11 @@ public class CardPlayer : BaseGameCard
         _currentHealth = _playerData.StartingHealth;
         _currentHorror = _playerData.StartingHorror;
         _currentResources = _playerData.StartingResources;
+
+        SingletonManager.GetSingleton<SpriteHelper>().GetSpriteFromUrl("https://orig00.deviantart.net/d8a6/f/2016/137/5/f/native_tongue_by_nakanoart-da2sfjn.jpg", (sprite) =>
+        {
+            _mainArt.sprite = sprite;
+        });
     }
 
     public void ModifyHealth(int quantity)

@@ -10,7 +10,7 @@ public class SpriteHelper : MonoBehaviour
         SingletonManager.RegisterSingleton(this);
     }
 
-    public void SpriteFromUrl (string url, Action<Sprite> callback)
+    public void GetSpriteFromUrl (string url, Action<Sprite> callback)
     {
         StartCoroutine(UrlToSprite(url, callback));
     }

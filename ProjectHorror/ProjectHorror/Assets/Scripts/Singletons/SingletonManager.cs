@@ -14,6 +14,13 @@ public class SingletonManager : MonoBehaviour
 
     public static T GetSingleton<T>() where T : MonoBehaviour
     {
-        return (T)_registeredSingletons.Where(mb => mb.GetType() == typeof(T));
+        foreach (MonoBehaviour singleton in _registeredSingletons)
+        {
+            if (singleton is T)
+            {
+                return (T)singleton;
+            }
+        }
+        return null;
     }
 }
